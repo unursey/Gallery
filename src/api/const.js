@@ -8,6 +8,6 @@ export const SECRET_KEY = 'vnmXQmvSeCBCiz9TUmFhpehq4esQqOEZTCKM6LcSC7A';
 // 'By1gbxGVgf5phBzGInXR_OeK3A5KaqO9wB0XzNKm5NA';
 // 'vnmXQmvSeCBCiz9TUmFhpehq4esQqOEZTCKM6LcSC7A';
 export const RESPONSE_TYPE = 'code';
-export const REDIRECT_URI = 'http://localhost:3000/auth';
+export const REDIRECT_URI = 'https://gallery-rose-seven.vercel.app/auth';
 export const SCOPE = 'public read_user read_photos write_likes';
 export const GRANT_TYPE = 'authorization_code';
