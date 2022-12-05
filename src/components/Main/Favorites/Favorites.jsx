@@ -33,7 +33,7 @@ export const Favorites = () => {
 
   return (
     <>
-      {!loading ? (photo ? (
+      {!photo ? (
         <Masonry
           breakpointCols={breakpointColumnsObj}
           className={style.masonryGrid}
@@ -45,9 +45,12 @@ export const Favorites = () => {
               />
             </li>
           ))}
+          {loading &&
+            <div className={style.more}><Preloader /></div>}
           <Outlet/>
-        </Masonry>) : (<p>Испытайте удачу позже.</p>)) :
-      (<div className={style.more}><Preloader /></div>)}
+        </Masonry>
+    ) :
+    (<p>Испытайте удачу позже.</p>)}
     </>
   );
 };
