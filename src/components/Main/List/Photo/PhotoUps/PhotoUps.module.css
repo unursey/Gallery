@@ -1,0 +1,37 @@
+  .up {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    border: 0;
+    background-color: transparent;
+    background-size: 100%;
+    transition: background-color 0.36s ease-in-out;
+    background-image: url('./img/like.svg');
+    background-repeat: no-repeat;
+    color: aliceblue;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .up:hover {
+    color: rgb(189, 50, 50);
+  }
+  
+  .up_active {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    border: 0;
+    background-color: transparent;
+    background-size: 100%;
+    transition: background-color 0.36s ease-in-out;
+    background-image: url('./img/like.svg');
+    background-repeat: no-repeat;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(189, 50, 50);
+  }

@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.block {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.likesBlock {
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+    align-items: center;
+}
+
+.btnLike {
+    background-color: transparent;
+    border: none;
+}
+
+.link {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.like {
+    width: 25px;
+    height: 25px;
+    fill: var(--greyBF);
+}
+
+.like_active {
+    width: 25px;
+    height: 25px;
+    fill: rgb(156, 40, 40);;
+}
+
+.likes {
+    font-weight: bold;
+}

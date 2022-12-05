@@ -1,0 +1,13 @@
+.header {
+    height: 80px;
+    padding: 25px 0;
+    background-color: rgb(156, 40, 40);
+  }
+  
+  .gridContainer {
+    display: grid;
+    grid-template-columns: 30px auto;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  
