@@ -19,7 +19,7 @@ export const Photo = ({photo}) => {
   return (
     <>
       <div className={style.photo} id={id}>
-        <Link to={`photos/${id}`}>
+        <Link to={`/photo/${id}`}>
           <img src={urls.small} alt={description} className={style.image} />
           <User user={user.name}/>
           <Date date={date}/>

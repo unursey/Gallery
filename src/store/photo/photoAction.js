@@ -22,7 +22,7 @@ export const photoRequestAsync = createAsyncThunk(
       {
         headers,
       });
-      console.log('data: ', data);
+
       let like;
       const photo = [...oldPhoto, ...data];
       if (data['liked_by_user']) {

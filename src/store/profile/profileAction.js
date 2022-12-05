@@ -7,7 +7,6 @@ export const profileRequestAsync = createAsyncThunk(
   async (username, {getState}) => {
     const token = getState().token.token;
     if (!token || !username) return;
-    console.log('token: ', token);
 
     try {
       const {data} =
@@ -17,9 +16,8 @@ export const profileRequestAsync = createAsyncThunk(
             Authorization: `Bearer ${token}`,
           },
         });
-      const photo = data;
-      console.log('photos: ', data);
-      return {photo};
+      console.log('photo: ', data);
+      return {data};
     } catch (err) {
       return ({error: err.toString()});
     }

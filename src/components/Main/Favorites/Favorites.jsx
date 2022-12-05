@@ -7,14 +7,15 @@ import {profileRequestAsync} from '../../../store/profile/profileAction';
 import Photo from '../List/Photo';
 import Masonry from 'react-masonry-css';
 import {Outlet} from 'react-router-dom';
+import {useAuth} from '../../../hooks/useAuth';
 
 export const Favorites = () => {
+  const token = useSelector(state => state.token.token);
+  const [auth] = useAuth();
+  const photo = useSelector(state => state.profile.photo);
+  const loading = useSelector(state => state.profile.loading);
   const dispatch = useDispatch();
   const navigation = useNavigate();
-  const token = useSelector(state => state.token.token);
-  const auth = useSelector(state => state.auth.data);
-  const loading = useSelector(state => state.profile.loading);
-  const photo = useSelector(state => state.profile.photo);
 
   useEffect(() => {
     if (!token) {
@@ -32,7 +33,7 @@ export const Favorites = () => {
 
   return (
     <>
-      {photo ? (
+      {!loading ? (photo ? (
         <Masonry
           breakpointCols={breakpointColumnsObj}
           className={style.masonryGrid}
@@ -44,12 +45,9 @@ export const Favorites = () => {
               />
             </li>
           ))}
-          {loading &&
-            <div className={style.more}><Preloader /></div>}
           <Outlet/>
-        </Masonry>
-    ) :
-    (<p>Испытайте удачу позже.</p>)}
+        </Masonry>) : (<p>Испытайте удачу позже.</p>)) :
+      (<div className={style.more}><Preloader /></div>)}
     </>
   );
 };

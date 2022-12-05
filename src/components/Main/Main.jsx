@@ -12,7 +12,7 @@ export const Main = () => (
       <Routes>
         <Route path='/auth' element={<Navigate to='/' />} />
         <Route path='/' element={<List />} />
-        <Route path='photos/:id' element={<ThisPhoto />} />
+        <Route path='/photo/:id' element={<ThisPhoto />} />
         <Route path='/profile' element={<Favorites />} />
         <Route path='*' element={<ErrorPage />} />
       </Routes>
