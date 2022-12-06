@@ -9,6 +9,7 @@
     gap: 20px;
     justify-content: space-between;
     align-items: center;
+    height: 32px;
 }
 
 .likesBlock {
@@ -43,4 +44,9 @@
 
 .likes {
     font-weight: bold;
+}
+
+.user {
+    width: 32px;
+    height: 32px;
 }

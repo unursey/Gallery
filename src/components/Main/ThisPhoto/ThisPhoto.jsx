@@ -11,6 +11,7 @@ import {usePhoto} from '../../../hooks/usePhoto';
 import {useNavigate} from 'react-router-dom';
 import {ErrorAuth} from '../../ErrorAuth/ErrorAuth';
 import {likeRequest} from '../../../api/like';
+import LoadImg from '../../../UI/LoadImg';
 
 export const ThisPhoto = () => {
   const {id} = useParams();
@@ -45,11 +46,18 @@ export const ThisPhoto = () => {
       <div className={style.container}>
         {!error && (loading ? <Preloader /> : thisPhoto.urls ? (
           <>
-            <img src={thisPhoto.urls.full}/>
+            <LoadImg
+              src={thisPhoto.urls.full}
+              alt={thisPhoto.description}
+              className={style.img}
+              height={thisPhoto.height}
+              width={thisPhoto.width}
+            />
             <div className={style.block}>
               <a className={style.link} href={thisPhoto.links.html}>
-                <img src={thisPhoto.user['profile_image'].small}
-                  alt='Аватар' />
+                <div className={style.user}><img
+                  src={thisPhoto.user['profile_image'].small}
+                  alt='Аватар' /></div>
                 {thisPhoto.user.name}
               </a>
               <time dateTime={thisPhoto['created_at']}>
