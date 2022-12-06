@@ -6,7 +6,7 @@ export const profileRequestAsync = createAsyncThunk(
   'profile/fetch',
   async (username, {getState}) => {
     const token = getState().token.token;
-    if (!token || !username) return;
+    if (!token || !username) return getState().photo;
 
     try {
       const {data} =
