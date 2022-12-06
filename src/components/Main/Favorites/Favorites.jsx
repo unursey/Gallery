@@ -33,7 +33,7 @@ export const Favorites = () => {
 
   return (
     <>
-      {!photo ? (
+      {photo ? (
         <Masonry
           breakpointCols={breakpointColumnsObj}
           className={style.masonryGrid}
